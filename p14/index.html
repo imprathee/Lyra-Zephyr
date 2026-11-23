@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LyraZephyr Aerial Logistics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>LYRAZEPHYR AERIAL LOGISTICS</h1>
+<p>Drone delivery, made simple</p>
+</header>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#process">How It Works</a></li>
+<li><a href="#plans">Plans</a></li>
+<li><a href="#media">Media</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#deliveries">Deliveries</a></li>
+<li><a href="#clients">Clients</a></li>
+<li><a href="#task-manager">Tasks</a></li>
+<li><a href="#finder">Finder</a></li>
+<li><a href="#booking">Book Now</a></li>
+</ul>
+</nav>
+
+<section id="home">
+<img src="images/drone-1.jpg" alt="Delivery drone flying over a city">
+<p class="badge">Same-day delivery</p>
+<h2>Fast, Safe, Autonomous Delivery</h2>
+<p>LyraZephyr Aerial Logistics delivers medical supplies, food and parcels by drone, skipping traffic and cutting delivery times from hours to minutes.</p>
+<button id="notify-button">Request Delivery</button>
+</section>
+
+<section id="services">
+<h2>Our Services</h2>
+<article>
+<h3>Medical Delivery</h3>
+<p>Urgent medicines and lab samples delivered between hospitals and clinics.</p>
+<button id="medical-button">More Info</button>
+<div class="info-card" id="medical-info">
+<span>Available 24/7.</span> Temperature-controlled boxes keep medicines safe.
+</div>
+</article>
+<article>
+<h3>Food Delivery</h3>
+<p>Hot meals and groceries delivered fresh to your doorstep.</p>
+<button id="food-button">More Info</button>
+<div class="info-card" id="food-info">
+<span>Insulated bags.</span> Meals arrive hot, usually within 30 minutes.
+</div>
+</article>
+<article>
+<h3>Parcel Delivery</h3>
+<p>Same-day delivery for documents and small packages.</p>
+<button id="parcel-button">More Info</button>
+<div class="info-card" id="parcel-info">
+<span>Up to 5 kg.</span> Every parcel can be tracked in real time.
+</div>
+</article>
+</section>
+
+<section id="process">
+<h2>How It Works</h2>
+<button id="process-button">Show / Hide Steps</button>
+<div class="steps" id="process-steps">
+<ol>
+<li>Book your delivery online.</li>
+<li>A drone collects your package.</li>
+<li>Track the flight in real time.</li>
+<li>Receive your package at the drop point.</li>
+</ol>
+</div>
+</section>
+
+<section id="plans">
+<h2>Delivery Plans</h2>
+<table>
+<tr>
+<th>Plan</th>
+<th>Max Weight</th>
+<th>Delivery Time</th>
+<th>Price</th>
+</tr>
+<tr>
+<td>Standard</td>
+<td>5 kg</td>
+<td>60 minutes</td>
+<td>Rs. 150</td>
+</tr>
+<tr>
+<td>Express</td>
+<td>10 kg</td>
+<td>30 minutes</td>
+<td>Rs. 300</td>
+</tr>
+<tr>
+<td>Priority Medical</td>
+<td>25 kg</td>
+<td>15 minutes</td>
+<td>Rs. 500</td>
+</tr>
+</table>
+</section>
+
+<section id="media">
+<h2>Media</h2>
+
+<h3>Our Fleet</h3>
+<img src="images/drone-2.jpg" alt="LyraZephyr delivery drone on a landing pad">
+<p>Caption: A LyraZephyr drone ready for takeoff.</p>
+
+<h3>Audio Briefing</h3>
+<audio controls src="media/briefing.mp3">Your browser does not support audio.</audio>
+<p>Caption: Listen to a short introduction to our service.</p>
+
+<h3>Delivery Demo</h3>
+<video controls width="480" src="media/demo.mp4">Your browser does not support video.</video>
+<p>Caption: A drone completing a package delivery.</p>
+
+<h3>Service Area</h3>
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=76.95%2C10.95%2C77.10%2C11.05&amp;layer=mapnik" width="480" height="300" title="Map of our service area"></iframe>
+<p>Caption: Our delivery coverage area.</p>
+</section>
+
+<section id="gallery">
+<h2>Gallery</h2>
+<article>
+<img src="images/drone-1.jpg" alt="Drone flying over a city">
+<p>City delivery flight</p>
+</article>
+<article>
+<img src="images/drone-2.jpg" alt="Drone on a landing pad">
+<p>Landing pad</p>
+</article>
+<article>
+<img src="images/drone-3.jpg" alt="Drone carrying a medical package">
+<p>Medical delivery</p>
+</article>
+<article>
+<img src="images/drone-4.jpg" alt="Drone delivering food">
+<p>Food delivery</p>
+</article>
+<article>
+<img src="images/drone-5.jpg" alt="Drone control room">
+<p>Control room</p>
+</article>
+<article>
+<img src="images/drone-6.jpg" alt="Drone at sunset">
+<p>Evening operations</p>
+</article>
+</section>
+
+<section id="deliveries">
+<h2>My Deliveries</h2>
+<p>Add a destination to create a delivery request.</p>
+<div class="delivery-input">
+<input type="text" id="destination" placeholder="Enter destination">
+<button id="add-button">Add</button>
+</div>
+<p id="delivery-message"></p>
+<p id="delivery-count">Total deliveries: 0</p>
+<ul id="delivery-list"></ul>
+</section>
+
+<section id="clients">
+<h2>Our Business Clients</h2>
+<div class="load-bar">
+<button id="load-button">Load Clients</button>
+<p id="status-message"></p>
+</div>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>City</th>
+<th>Company</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody id="client-table-body"></tbody>
+</table>
+</div>
+</section>
+
+<section id="task-manager">
+<h2>Delivery Task Manager</h2>
+<form id="task-form">
+<p>
+<label for="task-title">Task Title</label>
+<input type="text" id="task-title" placeholder="e.g. Deliver insulin to City Hospital" required>
+</p>
+<p>
+<label for="task-drone">Assigned Drone</label>
+<select id="task-drone">
+<option value="LZ-01">LZ-01</option>
+<option value="LZ-02">LZ-02</option>
+<option value="LZ-03">LZ-03</option>
+</select>
+</p>
+<p>
+<label for="task-priority">Priority</label>
+<select id="task-priority">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+</p>
+<p>
+<label for="task-notes">Notes</label>
+<textarea id="task-notes" rows="2" maxlength="100" placeholder="Optional notes"></textarea>
+</p>
+<p>
+<button type="submit" id="task-save-button">Add Task</button>
+<button type="reset">Clear</button>
+</p>
+</form>
+
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Drone</th>
+<th>Priority</th>
+<th>Notes</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="task-table-body"></tbody>
+</table>
+</div>
+</section>
+
+<section id="finder">
+<h2>Service Finder</h2>
+<div class="finder-controls">
+<input type="text" id="search-input" placeholder="Search services">
+<select id="category-select">
+<option value="all">All Categories</option>
+<option value="medical">Medical</option>
+<option value="food">Food</option>
+<option value="parcel">Parcel</option>
+</select>
+</div>
+
+<div class="finder-results">
+<ul id="service-list"></ul>
+<div id="service-details">Select a service to see its details.</div>
+</div>
+
+<h3>Frequently Asked Questions</h3>
+<details>
+<summary>How far can a drone deliver?</summary>
+<p>Our drones cover a radius of up to 25 km from the nearest hub.</p>
+</details>
+<details>
+<summary>What if the weather is bad?</summary>
+<p>Flights are paused during heavy rain or strong wind and resume when it is safe.</p>
+</details>
+<details>
+<summary>Can I track my delivery?</summary>
+<p>Yes, every flight can be tracked in real time.</p>
+</details>
+</section>
+
+<section id="booking">
+<h2>Book a Delivery</h2>
+<form id="booking-form" novalidate>
+
+<fieldset>
+<legend>Customer Details</legend>
+<p>
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3" maxlength="40" pattern="[A-Za-z ]+">
+</p>
+<p class="error" id="fullname-error"></p>
+
+<p>
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="name@example.com" required>
+</p>
+<p class="error" id="email-error"></p>
+
+<p>
+<label for="phone">Mobile Number</label>
+<input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" required maxlength="10" pattern="[6-9][0-9]{9}">
+</p>
+<p class="error" id="phone-error"></p>
+
+<p>
+<label for="password">Password</label>
+<input type="password" id="password" name="password" placeholder="Minimum 8 characters" required minlength="8" maxlength="20" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{8,20}">
+</p>
+<p class="error" id="password-error"></p>
+</fieldset>
+
+<fieldset>
+<legend>Delivery Details</legend>
+<p>
+<label for="weight">Package Weight (kg)</label>
+<input type="number" id="weight" name="weight" min="1" max="25" required>
+</p>
+<p class="error" id="weight-error"></p>
+
+<p>
+<label for="date">Delivery Date</label>
+<input type="date" id="date" name="date" required>
+</p>
+<p class="error" id="date-error"></p>
+
+<p>
+Delivery Type:
+<input type="radio" id="standard" name="delivery" value="standard" checked>
+<label for="standard">Standard</label>
+<input type="radio" id="express" name="delivery" value="express">
+<label for="express">Express</label>
+</p>
+
+<p>
+<label for="package">Package Type</label>
+<select id="package" name="package" required>
+<option value="">-- Select --</option>
+<option value="medical">Medical Supplies</option>
+<option value="food">Food</option>
+<option value="documents">Documents</option>
+<option value="parcel">General Parcel</option>
+</select>
+</p>
+<p class="error" id="package-error"></p>
+
+<p>
+Extras:
+<input type="checkbox" id="insurance" name="extras" value="insurance">
+<label for="insurance">Insurance</label>
+<input type="checkbox" id="sms" name="extras" value="sms">
+<label for="sms">SMS Updates</label>
+</p>
+
+<p>
+<label for="notes">Delivery Notes</label>
+<textarea id="notes" name="notes" rows="3" maxlength="200" placeholder="Landing instructions (optional)"></textarea>
+</p>
+
+<p>
+<label for="photo">Package Photo</label>
+<input type="file" id="photo" name="photo" accept="image/*">
+</p>
+</fieldset>
+
+<p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</p>
+<p class="success" id="form-success"></p>
+</form>
+</section>
+
+<a class="fixed-book" href="#booking">Book Now</a>
+
+<div class="notification" id="notification">
+<span>Request received.</span> Our team will contact you shortly.
+</div>
+
+<footer>
+<p>&copy; 2026 LyraZephyr Aerial Logistics</p>
+<p><a href="mailto:contact@lyrazephyr.com">contact@lyrazephyr.com</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
